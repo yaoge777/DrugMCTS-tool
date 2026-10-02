@@ -1,0 +1,19 @@
+knowledge_base = "../local-data/kiba.json"
+
+[llm]
+model = "Qwen/Qwen2.5-7B-Instruct"
+base_url = "http://localhost:8000/v1"
+api_key_env = ""
+temperature = 0.8
+
+[retrieval]
+mode = "tanimoto"
+top_n = 10
+
+[search]
+rollouts = 12
+branches = 4
+reference_count = 3
+reward_samples = 4
+max_llm_requests = 120
+max_seconds = 900

@@ -1,0 +1,10 @@
+include README.md README.zh-CN.md LICENSE VALIDATION.md .env.example
+recursive-include docs *.md
+recursive-include examples *.py *.toml
+recursive-include tests *.py
+prune local-data
+prune outputs
+prune .venv
+exclude config.local.toml
+global-exclude *.local.json
+global-exclude *.pyc __pycache__ .env

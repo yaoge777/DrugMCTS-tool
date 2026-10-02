@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+!.env.example
+local-data/
+outputs/
+config.local.toml
+*.local.json
+*.log
+.DS_Store

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "name": "Synthetic DrugMCTS software demonstration",
+  "provenance": "Hand-authored toy associations solely for testing software interfaces. No target relationship is a scientific claim.",
+  "demonstration_only": true,
+  "molecules": [
+    {"id": "DEMO_M1", "smiles": "O=C(O)c1ccccc1O", "protein_ids": ["DEMO_TARGET_A", "DEMO_TARGET_B"]},
+    {"id": "DEMO_M2", "smiles": "O=C(O)c1ccccc1", "protein_ids": ["DEMO_TARGET_A"]},
+    {"id": "DEMO_M3", "smiles": "CC(=O)Oc1ccccc1", "protein_ids": ["DEMO_TARGET_B"]},
+    {"id": "DEMO_M4", "smiles": "COc1ccccc1C(=O)O", "protein_ids": ["DEMO_TARGET_C"]},
+    {"id": "DEMO_M5", "smiles": "Oc1ccccc1", "protein_ids": ["DEMO_TARGET_C", "DEMO_TARGET_A"]},
+    {"id": "DEMO_M6", "smiles": "CC(=O)Nc1ccc(O)cc1", "protein_ids": ["DEMO_TARGET_B", "DEMO_TARGET_C"]}
+  ],
+  "proteins": [
+    {"id": "DEMO_TARGET_A", "name": "Synthetic target A", "pocket": "Toy pocket A for parser testing.", "literature": ["Synthetic fixture; not published scientific evidence."]},
+    {"id": "DEMO_TARGET_B", "name": "Synthetic target B", "pocket": "Toy pocket B for parser testing.", "literature": ["Synthetic fixture; not published scientific evidence."]},
+    {"id": "DEMO_TARGET_C", "name": "Synthetic target C", "pocket": "Toy pocket C for parser testing.", "literature": ["Synthetic fixture; not published scientific evidence."]}
+  ]
+}

@@ -1,0 +1,33 @@
+# Paths resolve relative to this file, not the current working directory.
+knowledge_base = "../local-data/drugbank.json"
+
+[llm]
+model = "Qwen/Qwen2.5-7B-Instruct"
+base_url = "http://localhost:8000/v1"
+# Set to "DRUGMCTS_API_KEY" for a service requiring a key; keep the value in the environment.
+api_key_env = ""
+temperature = 0.8
+max_output_tokens = 1024
+timeout_seconds = 60
+# Enable only if your endpoint supports response_format=json_object.
+json_mode = false
+
+[retrieval]
+mode = "tanimoto"
+top_n = 10
+min_tanimoto = 0.0
+# For the dual retrieval approach, install .[hybrid] and set mode="hybrid".
+chemberta_model = "DeepChem/ChemBERTa-77M-MLM"
+chemberta_revision = "main"
+
+[search]
+rollouts = 12
+branches = 4
+reference_count = 3
+reward_samples = 4
+exploration_constant = 3.0
+seed = 42
+response_attempts = 3
+max_llm_requests = 120
+max_seconds = 900
+max_prompt_chars = 60000
